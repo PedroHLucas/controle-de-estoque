@@ -26,19 +26,21 @@ public class estoqueTest implements CommandLineRunner {
     public void run(String... args) throws Exception{
 
         Categoria cat = new Categoria();
-        cat.setName("Eletronico");
+        cat.setName("Domestico");
         categoriaRepository.save(cat);
 
         Produto prod = new Produto();
-        prod.setNome("Notebok");
+        prod.setNome("Geladeira");
         prod.setDescricao("Uso Cotidiano");
-        prod.setPreco(150.0);
-        prod.setQuantidade_estoque(10);
+        prod.setPreco(1300.0);
+        prod.setQuantidade_estoque(12);
         prod.setCategoria(cat);
 
         Produto salvo = produtoRepository.save(prod);
 
         System.out.println(">>> SUCESSO: Produto " + prod.getNome() + " salvo com a categoria " + cat.getName());
+
+
 
     }
 
